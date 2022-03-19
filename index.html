@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>	
+	<style>
+		td {
+		width:50px;
+		height:30px;
+		text-align:center;
+		
+		}
+		table button{
+		width:50px;
+		height:30px;
+		}
+		#manHinh{
+		width:370px;
+		height:25px;
+		border:1px solid;
+		text-align:right;
+		margin:5px;
+		border-radius:5px;
+		}
+		form{
+		margin:10px;
+		}
+	</style>
+	
+</head>
+
+<body>
+	<!--<button onclick='kichThuocHinhTron()'>BT Tinh kich thuoc hinh tron</button><br><br>
+	<button onclick='hienThiNgayThang()'>BT Hien thi ngay thang</button><br><br>
+	<button onclick='tinhLaiNganHang()'>BT Tinh lai suat ngan hang</button><br><br>
+	<script src="javascript.js"></script>
+	<p id="demo">Click Me</p>
+	<script>
+	function clickFunction(){
+	alert("xin chao");
+	}
+	let demo = document.getElementById("demo");
+	demo.addEventListener("click",clickFunction);
+	
+	</script>
+	
+	<select id="select" onchange="do_something()">
+		<option value="Audi">Audi</option>
+		<option value="BMW">BMW</option>
+		<option value="Mecedec">Mecedec</option>
+		<option value="Camry">Camry</option>
+	</select>
+	<script>
+	/*function do_something(){
+		let demo = document.getElementById("select").value;
+		alert(demo);
+		}*/
+	let demo = document.getElementById("select");
+	demo.addEventListener("change",onchangeFunction);
+	function onchangeFunction(){
+	let valueDemo = document.getElementById("select").value;
+	alert(valueDemo);
+	}
+
+	</script>
+	
+	<h1 id="mouseFunctionAdd">hello everyone</h1>
+	<h1 id="mouseFunction" onmouseover = "onMouseOver()" onmouseout = "onMouseOut()">my name is Thuy</h1>
+	<h1 id="demo">I am 18 year old</h1>
+	<h2 id="total"></h2>
+	
+	<script> 
+	document.getElementById("demo").innerHTML = ("I am 28 year old");
+		
+	let onMouseAdd = document.getElementById("mouseFunctionAdd");
+	onMouseAdd.addEventListener("mouseover", onMouseOverAdd);
+	onMouseAdd.addEventListener("mouseout", onMouseOutAdd);
+
+	function onMouseOverAdd(){
+	document.getElementById("mouseFunctionAdd").style.color="blue";
+	}
+	
+	function onMouseOutAdd(){
+	document.getElementById("mouseFunctionAdd").style.color="black";
+	}
+
+	function onMouseOver(){
+	document.getElementById("mouseFunction").style.color="red";
+	}
+	function onMouseOut(){
+	document.getElementById("mouseFunction").style.color="black";
+	}
+	let a,b;
+	a = 3;
+	b = 5;
+	let total = a+b;
+	document.getElementById("total").innerHTML= (total);
+	</script>-->
+	
+	<h1>Bai tap 1</h1>
+	<button type = "button" onclick="showMessage();">Click Me!</button>
+	<script>
+		function showMessage(){
+		alert('Xin Chao!');
+		}
+	</script>
+	
+	<h1>Bai tap 2</h1>
+	<div id="massageDiv"></div>
+	<button type = "button" onclick="showMessage2();">Click Me!</button>
+	<script>
+	function showMessage2(){
+	document.getElementById('massageDiv').innerHTML='xin chao.';		}
+	</script>
+	<h1>Bai tap 3</h1>
+	<button type = "button" onclick="showMessage3();">Click Me!</button>
+	<script>
+	function showMessage3(){
+	document.write('xin chao.');
+	}
+	</script>
+	<h1>Bai tap 4</h1>
+	<button type = "button" onclick="showMessage4();">Click Me!</button>
+	<script>
+	function showMessage4(){
+	console.log('xin chao.');
+	}
+	</script>
+
+
+	<h1>Kiem tra so chan</h1>
+	<h3> Moi ban nhap so </h3>
+	<input type="text" id="number">	
+	<button type = "button" onclick="checkNumber();">Kiem tra</button>
+	<script>
+
+	function checkNumber(){
+	let numberCheck = document.getElementById("number").value;
+
+	if (numberCheck%2 == 0)
+	{
+	alert(numberCheck + ' la so chan');
+	}
+	else{
+	alert(numberCheck +' khong phai la so chan');
+	}
+	}
+	</script>
+
+	<h1>Tao may tinh don gian</h1>
+	<form>
+	<input type= "text" id="input1" class="">
+	<input type= "text" id="input2" class="">
+	<button type = "button" onclick="cong();">phep +</button>
+	<button type = "button" onclick="tru();">phep -</button>
+	<button type = "button" onclick="nhan();">phep *</button>
+	<button type = "button" onclick="chia();">phep /</button>
+	<br>
+	<br>
+	<div id="ketqua"> </div>
+	</form>
+	<script>
+	
+	function cong(){
+	var number1 = document.getElementById("input1").value;
+	var number2 = document.getElementById("input2").value;
+	let cong = number1*1 + number2*1;
+	document.getElementById("ketqua").innerHTML = 'Ket qua phep cong la ' + cong;
+	}
+	function tru(){
+	var number1 = document.getElementById("input1").value;
+	var number2 = document.getElementById("input2").value;
+	let tru = number1*1 - number2*1;
+	document.getElementById("ketqua").innerHTML = ("Ket qua phep tru la " + tru);
+	}
+	function nhan(){
+	var number1 = document.getElementById("input1").value;
+	var number2 = document.getElementById("input2").value;
+	let nhan = number1*1 * number2;
+	document.getElementById("ketqua").innerHTML = ("Ket qua phep nhan la " + nhan);
+	}
+	function chia(){
+	var number1 = document.getElementById("input1").value;
+	var number2 = document.getElementById("input2").value;
+	let chia = number1*1 / number2;
+	document.getElementById("ketqua").innerHTML = ("Ket qua phep chia la " + chia);
+	}
+	</script>
+	
+	<h1>Tao may tinh nang cao</h1>
+	<form>
+	<div id="manHinh">0 </div>
+	<table>
+		<tr>
+			<td><button type = "button" onclick=";">Rad </button></td>
+			<td><button type = "button" onclick=";">... </button></td>
+			<td><button type = "button" onclick=";">x! </button></td>
+			<td><button type = "button" onclick=";">( </button></td>
+			<td><button type = "button" onclick=";">) </button></td>
+			<td><button type = "button" onclick=";">% </button></td>
+			<td><button type = "button" onclick=";">AC </button></td>
+		</tr>
+		<tr>
+			<td><button type = "button" onclick=";">Inv </button></td>
+			<td><button type = "button" onclick=";">Sin </button></td>
+			<td><button type = "button" onclick=";">In </button></td>
+			<td><button type = "button" onclick=";">7 </button></td>
+			<td><button type = "button" onclick=";">8 </button></td>
+			<td><button type = "button" onclick=";">9 </button></td>
+			<td><button type = "button" onclick=";">/ </button></td>
+		</tr>
+		<tr>
+			<td><button type = "button" onclick=";">Pi </button></td>
+			<td><button type = "button" onclick=";">cos </button></td>
+			<td><button type = "button" onclick=";">log </button></td>
+			<td><button type = "button" onclick=";">4 </button></td>
+			<td><button type = "button" onclick=";">5 </button></td>
+			<td><button type = "button" onclick=";">6 </button></td>
+			<td><button type = "button" onclick=";">x </button></td>
+		</tr>
+		<tr>
+			<td><button type = "button" onclick=";">e </button></td>
+			<td><button type = "button" onclick=";">tan </button></td>
+			<td><button type = "button" onclick=";">V </button></td>
+			<td><button type = "button" onclick=";">1 </button></td>
+			<td><button type = "button" onclick=";">2 </button></td>
+			<td><button type = "button" onclick=";">3 </button></td>
+			<td><button type = "button" onclick=";">- </button></td>
+		</tr>
+		<tr>
+			<td><button type = "button" onclick=";">Ans </button></td>
+			<td><button type = "button" onclick=";">EXP </button></td>
+			<td><button type = "button" onclick=";">X^y </button></td>
+			<td><button type = "button" onclick=";">0 </button></td>
+			<td><button type = "button" onclick=";">. </button></td>
+			<td><button type = "button" onclick=";">= </button></td>
+			<td><button type = "button" onclick=";">+ </button></td>
+		</tr>
+	</table>
+	</form>
+
+	<h1>Bai tap xac dinh nam nhuan</h1>
+	<button type = "button" onclick="checkNamNhuan();">Kiem tra</button>
+	<script>
+	function checkNamNhuan(){
+		let year = parseInt(prompt("Enter a year"));	
+		if (year % 4 == 0) {
+  			if (year % 100 == 0) {
+    			if (year % 400 == 0) {
+      				alert(year + " is a leap year");
+    			} else {
+      				alert(year + " is NOT a leap year");
+    			}
+  			} else {
+    			alert(year + " is a leap year");
+  			}
+		} else {
+  			alert(year + " is NOT a leap year");
+		}
+		}
+	</script>
+
+
+	<h1>Bai tap xac dinh nam nhuan</h1>
+	<button type = "button" onclick="checkNamNhuan();">Kiem tra</button>
+	<script>
+	function checkNamNhuan(){
+		let year = parseInt(prompt("Enter a year"));
+		let isLeapYear = false;
+
+		if (year % 4 == 0) {
+  			if (year % 100 == 0) {
+    			if (year % 400 == 0) {
+      				isLeapYear = true;
+    				}
+  			} else {
+    			isLeapYear = true;
+  				}
+		}
+
+		if (isLeapYear) {
+ 			 alert(year + " is a leap year");
+		} else {
+  			alert(year + " is NOT a leap year");
+		}		
+		}
+	</script>
+
+</body>
+</html>
